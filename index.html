@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Zahraa - The Holy Quran & Islamic Resources</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <a href="#home" class="logo">
+                    <img src="assets/logo.jpg" alt="Al Zahraa" style="height: 50px; border-radius: 50%;">
+                    <span class="logo-text">Al Zahraa</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home" data-link>Home</a></li>
+                    <li><a href="#quran" data-link>Quran</a></li>
+                    <li><a href="#prayers" data-link>Prayers</a></li>
+                    <li><a href="#library" data-link>Library</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-trigger" id="searchTrigger">
+                        <i class="fa-solid fa-search"></i>
+                    </div>
+                </div>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Injection Point -->
+        <main id="main-content" class="fade-in">
+            <!-- Dynamic Content Loaded Here -->
+        </main>
+
+        <!-- Global Audio Player (Persistent) -->
+        <div class="audio-dock hidden" id="audioDock">
+            <div class="audio-container">
+                <div class="track-info">
+                    <span id="track-title">Surah Al-Fatiha</span>
+                    <span id="track-reciter">Mishary Alafasy</span>
+                </div>
+                <div class="audio-controls">
+                    <button id="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="playBtn"><i class="fa-solid fa-play"></i></button>
+                    <button id="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                <div class="audio-progress">
+                    <input type="range" id="progressBar" value="0">
+                </div>
+                <audio id="globalAudio"></audio>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Al Zahraa. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#privacy">Privacy</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay hidden" id="searchOverlay">
+            <div class="search-container">
+                <div class="search-header">
+                    <input type="text" id="globalSearchInput" placeholder="Search Quran, Hadith, or Topics...">
+                    <button id="closeSearch"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="search-results" id="searchResults">
+                    <!-- Results injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/router.js" type="module"></script>
+    <script src="assets/js/ui.js" type="module"></script>
+    <script src="assets/js/app.js" type="module"></script>
+</body>
+
+</html>
